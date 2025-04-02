@@ -1,0 +1,19 @@
+#include <iostream>//5
+#include <string>
+
+using namespace std;
+
+int main() {
+	string str;
+	while (true) {
+		getline(cin, str);
+		if (str == "exit") {
+			break;
+		}
+		srand((unsigned)time(0));
+		int n = rand() % str.length();
+		char c = 'a' + rand() % 26;
+		str[n] = c;
+		cout << ">>" << str << endl;
+	}
+}
