@@ -1,0 +1,42 @@
+#include <iostream>//8
+#include <string>
+
+using namespace std;
+
+int n;
+
+class Integer {
+public:
+	int get() {
+		return n;
+	}
+	int set(int a) {
+		n = a;
+		return n;
+	}
+	Integer(int a) {
+		n = a;
+	}
+	Integer(string a);
+	bool isEven();
+};
+
+Integer::Integer(string a){
+	n = stoi(a);
+}
+
+bool Integer::isEven() {
+	if (n % 2 == 0) {
+		return true;
+	}
+}
+
+int main() {
+	Integer n(30);
+	cout << n.get() << ' ';
+	n.set(50);
+	cout << n.get() << ' ';
+	Integer m("300");
+	cout << m.get() << ' ';
+	cout << m.isEven() << ' ';
+}
