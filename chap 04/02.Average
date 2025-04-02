@@ -1,0 +1,15 @@
+#include <iostream>//2
+
+using namespace std;
+
+int main() {
+	int count = 5;
+	int* array = new int[count];
+	double n = 0;
+	for (int i = 0;i < 5;i++) {
+		cin >> array[i];
+		n += array[i];
+	}
+	cout <<"평균:" << n / 5 << endl;
+	delete []array;
+}
