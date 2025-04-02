@@ -1,0 +1,35 @@
+#include <iostream>//7
+#include <string>
+
+using namespace std;
+
+class Circle {
+	int radius;
+public:
+	void setRadius(int n) {
+		radius = n;
+	}
+	double getArea() {
+		return radius * radius * 3.14;
+	}
+};
+
+int main() {
+	double arr[3];
+	Circle c;
+	int n;
+	int cnt = 0;
+	for (int i = 0;i < 3;i++) {
+		cout << "원 " << i + 1 << "의 반지름 >>";
+		cin >> n;
+		c.setRadius(n);
+		arr[i] = c.getArea();
+	}
+
+	for (int i = 0;i < 3;i++) {
+		if (arr[i] > 100) {
+			cnt++;
+		}
+	}
+	cout << "면적이 100보다 큰 원은 " << cnt << "개 입니다." << endl;
+}
